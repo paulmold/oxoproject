@@ -8,11 +8,11 @@
 ###Setup
 
 - Clone the repository using `git clone https://github.com/paulmold/oxoproject.git`
-- In the project directory run `docker compose up`
+- In the project directory run `docker compose up` (on unix: `docker-compose up`)
 - To run the import script enter into terminal:
   - `docker exec -it php-apache /bin/bash`
   - `php import.php -f="data.html"`
-- To view the poroject open http://localhost:8000/
+- To view the project open http://localhost:8000/
 
 ###Notes
 
