@@ -34,10 +34,6 @@ final class Route
      * @param string $name
      * @param string $path
      * @param array $parameters
-     *    $parameters = [
-     *      0 => (string) Controller name : HomeController::class.
-     *      1 => (string|null) Method name or null if invoke method
-     *    ]
      * @param array $methods
      */
     public function __construct(string $name, string $path, array $parameters, array $methods = ['GET'])
