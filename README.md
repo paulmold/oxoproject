@@ -8,6 +8,9 @@
 ###Setup
 
 - Clone the repository using `git clone https://github.com/paulmold/oxoproject.git`
+- Create a `.env` file like the one `.example.env`
+- Find out the ip address of your database using: `docker inspect -f '{{.Name}} - {{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' db`
+- Copy your ip address into your `.env` file at `DB_HOST=`
 - In the project directory run `docker compose up` (on unix: `docker-compose up`)
 - To run the import script enter into terminal:
   - `docker exec -it php-apache /bin/bash`

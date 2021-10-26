@@ -219,9 +219,9 @@ class Job extends DbModel implements ModelInterface
     public function save(): int {
         $existingJob = $this->getByName();
         if ($existingJob) {
-            $sql = "UPDATE " . self::TABLE . " SET description = ?, expiration = ?, openings = ?, visited = 1";
+            $sql = "UPDATE " . self::TABLE . " SET description = ?, expiration = ?, openings = ?, visited = 1 WHERE id = ?";
             $stmt = DbConnection::getInstance()->connection()->prepare($sql);
-            $stmt->bind_param("ssi", $this->description, $this->expiration, $this->openings);
+            $stmt->bind_param("ssii", $this->description, $this->expiration, $this->openings, $existingJob->id);
             $stmt->execute();
 
             return $existingJob->id;

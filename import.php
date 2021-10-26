@@ -3,7 +3,13 @@
 use config\Config;
 use model\DbConnection;
 
-spl_autoload_register();
+spl_autoload_register(function ($class) {
+    $file = str_replace('\\', '/', $class . '.php');
+    if (file_exists($file)) {
+        require $file;
+    }
+});
+
 (new Config(__DIR__ . '/.env'))->load();
 
 function logMessage(string $message) {
