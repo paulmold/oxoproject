@@ -29,6 +29,7 @@ create table job
     openings int default 1 not null,
     company_id int not null,
     profession_id int not null,
+    visited int default 1 not null,
     constraint job_unique
         unique (name, company_id, profession_id),
     constraint job_company_id_fk

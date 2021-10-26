@@ -16,7 +16,7 @@ class DbModel
      * @param array $dbArray
      * @return DbModel
      */
-    public function fromObject(array $dbArray): DbModel {
+    public function fromArray(array $dbArray): DbModel {
         $class = get_class($this);
         $dtObject = new $class();
         foreach (get_object_vars($this) as $string => $value) {

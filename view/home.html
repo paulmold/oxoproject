@@ -6,7 +6,29 @@
     <link href="view/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div class="jobs">
+<h1 class="title">Jobs</h1>
+<div class="sort-filter">
+    <span>Sort by:</span>
+    <select id="sortBy">
+        <option disabled selected value> -- select an option --</option>
+        <option value="nameAsc">Name Asc</option>
+        <option value="nameDesc">Name Desc</option>
+        <option value="openingsAsc">Openings Asc</option>
+        <option value="openingsDesc">Openings Desc</option>
+    </select>
+    <p><b>Filter by:</b></p>
+    <div>
+        <span>Company:</span>
+        <select id="filterCompany">
+        </select>
+    </div>
+    <div>
+        <span>Profession:</span>
+        <select id="filterProfession">
+        </select>
+    </div>
+</div>
+<div id="jobs">
 
 </div>
 <script type="text/javascript" src="view/script.js"></script>

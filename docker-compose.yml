@@ -23,4 +23,4 @@ services:
             MYSQL_ROOT_PASSWORD: "${DB_ROOT_PW}"
             MYSQL_PASSWORD: "${DB_PW}"
         ports:
-            - "9906:3306"
+            - "3306:3306"

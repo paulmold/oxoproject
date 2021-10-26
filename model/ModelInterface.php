@@ -11,6 +11,6 @@ interface ModelInterface
     public function add(): int;
 
 //    public function update();
-//
+
 //    public function delete();
 }
