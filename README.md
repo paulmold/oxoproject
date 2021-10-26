@@ -20,4 +20,5 @@
 ###Notes
 
 Docker will handle the apache server and the mysql server.
+
 The database will construct itself using the structure found in *db/structure.sql*
